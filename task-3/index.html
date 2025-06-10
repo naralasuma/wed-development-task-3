@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Responsive Site</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>My Responsive Site</h1>
+    <button id="darkModeToggle" type="button" aria-label="Toggle Dark Mode">Toggle Dark Mode</button>
+  </header>
+
+  <main>
+
+    <!-- Image Carousel -->
+    <section class="carousel" aria-label="Image Carousel">
+      <img id="carousel-img" src="images (2).jpg" alt="carousel image" />
+      <div class="controls">
+        <button type="button" onclick="prevImage()">Previous</button>
+        <button type="button" onclick="nextImage()">Next</button>
+      </div>
+    </section>
+
+    <!-- API Joke Section -->
+    <section class="api-section">
+      <h2>Random Joke</h2>
+      <p id="joke">Click the button to load a joke.</p>
+      <button type="button" onclick="loadJoke()">Get Joke</button>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <h2>About Us</h2>
+      <p>We build responsive and interactive websites using HTML, CSS, and JavaScript.</p>
+    </section>
+
+    <!-- Services Section with Progress Bars -->
+    <section class="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Responsive Web Design</li>
+        <li>Frontend Development</li>
+        <li>API Integration</li>
+      </ul>
+
+      <div class="skill">
+        <label for="js-progress">JavaScript</label>
+        <div class="progress-bar" id="js-progress"><div class="progress" data-progress="80"></div></div>
+      </div>
+      <div class="skill">
+        <label for="css-progress">CSS</label>
+        <div class="progress-bar" id="css-progress"><div class="progress" data-progress="70"></div></div>
+      </div>
+      <div class="skill">
+        <label for="html-progress">HTML</label>
+        <div class="progress-bar" id="html-progress"><div class="progress" data-progress="90"></div></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your Name" required />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Your Email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Go to top" type="button" aria-label="Back to Top">⬆</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
